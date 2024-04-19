@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp.sp --branchpatch=sdcomp-29491-629360
+".\objects\core_cm4_constants.o"
+".\objects\main.o"
+".\objects\startup_stm32l476xx.o"
+".\objects\stm32l476xx_constants.o"
+".\objects\sysclock.o"
+".\objects\uart.o"
+".\objects\hexupdate.o"
+".\objects\lightupdate.o"
+".\objects\parse.o"
+".\objects\floors.o"
+".\objects\floor4.o"
+".\objects\floor3.o"
+".\objects\floor2.o"
+".\objects\floor1.o"
+".\objects\motorup.o"
+".\objects\motordown.o"
+".\objects\keypadscan.o"
+".\objects\dooropen.o"
+".\objects\doorclose.o"
+--strict --scatter ".\Objects\ElevatorRedo.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\ElevatorRedo.map" -o .\Objects\ElevatorRedo.axf
