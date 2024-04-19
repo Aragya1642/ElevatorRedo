@@ -11,11 +11,11 @@ motor_up PROC
 up_loop
 	MOV r7, #0x0 	;resting default values
 	MOV r5, #0x0
-	MOV r1 , #108
+	MOV r9 , #108
 	B up_step	
 up_step_loop	
 	ADD r5, r5 ,#0x1
-	CMP r5,r1
+	CMP r5,r9
 	BNE up_step
 	BEQ motor_up_endl
 up_step

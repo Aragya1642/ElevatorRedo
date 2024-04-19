@@ -11,7 +11,7 @@ door_open PROC
 open_loop
 	MOV r7, #0x0    ;resting default values
 	MOV r5, #0x0
-	MOV r9 , #108
+	MOV r9 , #10
 	B open_step 
 open_step_loop         
 	ADD r5, r5 ,#0x1

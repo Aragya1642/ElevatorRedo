@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\ElevatorRedo.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\ElevatorRedo.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Fri Apr 19 08:37:25 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Fri Apr 19 09:01:17 2024
 <BR><P>
 <H3>Maximum Stack Usage =         12 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -491,9 +491,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_Write
 </UL>
 
-<P><STRONG><a name="[62]"></a>floor_1</STRONG> (Thumb, 146 bytes, Stack size 0 bytes, floor1.o(Floor1))
-<BR><BR>[Calls]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;door_open
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_down
+<P><STRONG><a name="[62]"></a>floor_1</STRONG> (Thumb, 144 bytes, Stack size 0 bytes, floor1.o(Floor1))
+<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_down
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_update
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hex_update
 </UL>
@@ -544,8 +543,6 @@ Global Symbols
 <P><STRONG><a name="[67]"></a>door_close</STRONG> (Thumb, 254 bytes, Stack size 0 bytes, doorclose.o(doorClose))
 
 <P><STRONG><a name="[66]"></a>door_open</STRONG> (Thumb, 254 bytes, Stack size 0 bytes, dooropen.o(doorOpen))
-<BR><BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;floor_1
-</UL>
 
 <P><STRONG><a name="[68]"></a>hex_update</STRONG> (Thumb, 182 bytes, Stack size 0 bytes, hexupdate.o(hexUpdate))
 <BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;floor_4

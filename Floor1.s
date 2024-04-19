@@ -27,10 +27,9 @@ floor_1 PROC
 
 floor_1_from_1
 	PUSH {LR}
-	BL door_open
-	PUSH {LR}
+	;BL door_open
 	;BL door_close
-	
+	POP {LR}
 	B floor_1_call_endl
 floor_1_from_2
 	PUSH {LR}

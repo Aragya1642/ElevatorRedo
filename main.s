@@ -11,6 +11,8 @@
 	IMPORT	motor_up
 	IMPORT	motor_down
 	IMPORT	keypad_scan
+	IMPORT	door_open
+	IMPORT	door_close
 
 	
 	AREA    main, CODE, READONLY
@@ -204,6 +206,7 @@ col_int
 	MOV r9, #0x00000000
 	MOV r11, #0x00000001
 	BL hex_update
+;	BL door_open
 
 myMain
 	CMP r10, #0x00000000
@@ -216,11 +219,8 @@ floors_function
 	BEQ stop
 	B myMain
 parser_function
-	
 	BL parser
-	;BL keypad_scan
-	
-	;BL light_update
+;	BL keypad_scan
 	B myMain
 
 	
