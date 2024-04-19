@@ -65,6 +65,8 @@ floor_3_call_endl
 	BIC r10, #0x00000004
 	PUSH {LR}
 	BL light_update
+	BL door_open
+	BL door_close
 	POP {LR}
 	BX LR	
 	ENDP

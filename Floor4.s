@@ -26,8 +26,8 @@ floor_4 PROC
 	
 floor_4_from_4
 	PUSH {LR}
-	;BL door_open
-	;BL door_close
+;	BL door_open
+;	BL door_close
 	POP {LR}
 	B floor_4_call_endl
 floor_4_from_3
@@ -70,6 +70,8 @@ floor_4_call_endl
 	BIC r10, #0x00000008
 	PUSH {LR}
 	BL light_update
+	BL door_open
+	BL door_close
 	POP {LR}
 	BX LR
 	ENDP

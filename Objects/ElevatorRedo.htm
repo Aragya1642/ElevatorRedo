@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\ElevatorRedo.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\ElevatorRedo.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Fri Apr 19 09:34:02 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Fri Apr 19 09:41:39 2024
 <BR><P>
 <H3>Maximum Stack Usage =         12 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -491,36 +491,44 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_Write
 </UL>
 
-<P><STRONG><a name="[62]"></a>floor_1</STRONG> (Thumb, 144 bytes, Stack size 0 bytes, floor1.o(Floor1))
+<P><STRONG><a name="[62]"></a>floor_1</STRONG> (Thumb, 152 bytes, Stack size 0 bytes, floor1.o(Floor1))
 <BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_down
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_update
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hex_update
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;door_open
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;door_close
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;floors
 </UL>
 
-<P><STRONG><a name="[61]"></a>floor_2</STRONG> (Thumb, 120 bytes, Stack size 0 bytes, floor2.o(Floor2))
+<P><STRONG><a name="[61]"></a>floor_2</STRONG> (Thumb, 128 bytes, Stack size 0 bytes, floor2.o(Floor2))
 <BR><BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_up
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_down
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_update
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hex_update
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;door_open
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;door_close
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;floors
 </UL>
 
-<P><STRONG><a name="[60]"></a>floor_3</STRONG> (Thumb, 120 bytes, Stack size 0 bytes, floor3.o(Floor3))
+<P><STRONG><a name="[60]"></a>floor_3</STRONG> (Thumb, 128 bytes, Stack size 0 bytes, floor3.o(Floor3))
 <BR><BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_up
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_down
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_update
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hex_update
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;door_open
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;door_close
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;floors
 </UL>
 
-<P><STRONG><a name="[5f]"></a>floor_4</STRONG> (Thumb, 144 bytes, Stack size 0 bytes, floor4.o(Floor4))
+<P><STRONG><a name="[5f]"></a>floor_4</STRONG> (Thumb, 152 bytes, Stack size 0 bytes, floor4.o(Floor4))
 <BR><BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_up
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_update
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hex_update
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;door_open
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;door_close
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;floors
 </UL>
@@ -531,17 +539,27 @@ Global Symbols
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;floor_2
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;floor_1
 </UL>
+<BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+</UL>
 
 <P><STRONG><a name="[5d]"></a>parser</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, parse.o(Parse))
 <BR><BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;light_update
 </UL>
+<BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+</UL>
 
 <P><STRONG><a name="[67]"></a>door_close</STRONG> (Thumb, 254 bytes, Stack size 0 bytes, doorclose.o(doorClose))
-<BR><BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;floor_4
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;floor_3
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;floor_2
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;floor_1
 </UL>
 
 <P><STRONG><a name="[66]"></a>door_open</STRONG> (Thumb, 254 bytes, Stack size 0 bytes, dooropen.o(doorOpen))
-<BR><BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+<BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;floor_4
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;floor_3
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;floor_2
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;floor_1
 </UL>
 
 <P><STRONG><a name="[68]"></a>hex_update</STRONG> (Thumb, 182 bytes, Stack size 0 bytes, hexupdate.o(hexUpdate))
@@ -566,12 +584,12 @@ Global Symbols
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parser
 </UL>
 
-<P><STRONG><a name="[5b]"></a>__main</STRONG> (Thumb, 416 bytes, Stack size 0 bytes, main.o(main))
+<P><STRONG><a name="[5b]"></a>__main</STRONG> (Thumb, 434 bytes, Stack size 0 bytes, main.o(main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = __main &rArr; UART2_Init &rArr; USART_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hex_update
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;door_open
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;door_close
+<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parser
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hex_update
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;floors
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART2_Init
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Clock_Init
 </UL>

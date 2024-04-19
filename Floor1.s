@@ -27,8 +27,8 @@ floor_1 PROC
 
 floor_1_from_1
 	PUSH {LR}
-	;BL door_open
-	;BL door_close
+;	BL door_open
+;	BL door_close
 	POP {LR}
 	B floor_1_call_endl
 floor_1_from_2
@@ -36,8 +36,8 @@ floor_1_from_2
 	BL motor_down
 	MOV r11, #0x00000001
 	BL hex_update
-	;BL door_open
-	;BL door_close
+;	BL door_open
+;	BL door_close
 	POP {LR}
 	B floor_1_call_endl
 floor_1_from_3
@@ -48,8 +48,8 @@ floor_1_from_3
 	BL motor_down
 	MOV r11, #0x00000001
 	BL hex_update
-	;BL door_open
-	;BL door_close
+;	BL door_open
+;	BL door_close
 	POP {LR}
 	B floor_1_call_endl
 floor_1_from_4
@@ -63,8 +63,8 @@ floor_1_from_4
 	BL motor_down
 	MOV r11, #0x00000001
 	BL hex_update
-	;BL door_open
-	;BL door_close
+;	BL door_open
+;	BL door_close
 	POP {LR}
 	B floor_1_call_endl
 floor_1_call_endl
@@ -72,6 +72,8 @@ floor_1_call_endl
 	PUSH {LR}
 	;call keypad function
 	BL light_update
+	BL door_open
+	BL door_close
 	POP {LR}
 	BX LR	
 	ENDP
