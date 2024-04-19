@@ -7,6 +7,7 @@
 	IMPORT motor_down
 	IMPORT door_open
 	IMPORT door_close
+	IMPORT keypad_scan
 		
 	AREA    Floor2, CODE, READONLY
 	EXPORT	floor_2			; make __main visible to linker
@@ -66,6 +67,7 @@ floor_2_call_endl
 	PUSH {LR}
 	BL light_update
 	BL door_open
+	BL keypad_scan
 	BL door_close
 	POP {LR}
 	BX LR	

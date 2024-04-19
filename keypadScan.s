@@ -8,6 +8,7 @@
 	ENTRY
 	
 keypad_scan PROC
+	MOV r9, #0x00000FF0
 loop
 	; Set all row outputs to 0
 	LDR r0, =GPIOB_BASE
@@ -20,7 +21,13 @@ loop
 	BIC r1, #0x10
 	STR r1, [r0, #GPIO_ODR]
 	
-	
+	SUB r9, #1
+	CMP r9,#0
+	BEQ return_keypad
+	BNE keep_going
+return_keypad
+	BX LR
+keep_going	
 	MOV r0, #9999
 delay1
 	SUB r0, r0, #1              

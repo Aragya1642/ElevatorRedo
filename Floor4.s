@@ -6,6 +6,7 @@
 	IMPORT light_update
 	IMPORT door_open
 	IMPORT door_close
+	IMPORT keypad_scan
 		
 	AREA    Floor4, CODE, READONLY
 	EXPORT	floor_4			; make __main visible to linker
@@ -26,8 +27,6 @@ floor_4 PROC
 	
 floor_4_from_4
 	PUSH {LR}
-;	BL door_open
-;	BL door_close
 	POP {LR}
 	B floor_4_call_endl
 floor_4_from_3
@@ -35,8 +34,6 @@ floor_4_from_3
 	BL motor_up
 	MOV r11, #0x00000008
 	BL hex_update
-;	BL door_open
-;	BL door_close
 	POP {LR}
 	B floor_4_call_endl
 floor_4_from_2
@@ -47,8 +44,6 @@ floor_4_from_2
 	BL motor_up
 	MOV r11, #0x00000008
 	BL hex_update
-;	BL door_open
-;	BL door_close
 	POP {LR}
 	B floor_4_call_endl
 floor_4_from_1
@@ -62,8 +57,6 @@ floor_4_from_1
 	BL motor_up
 	MOV r11, #0x00000008
 	BL hex_update
-;	BL door_open
-;	BL door_close
 	POP {LR}
 	B floor_4_call_endl
 floor_4_call_endl
@@ -71,6 +64,7 @@ floor_4_call_endl
 	PUSH {LR}
 	BL light_update
 	BL door_open
+	BL keypad_scan
 	BL door_close
 	POP {LR}
 	BX LR
