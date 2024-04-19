@@ -29,8 +29,10 @@ down_step
 	BIC r4,#0x0400
     ;A
     ORR r3, #0x0000 ;first step
+	;C
     ORR r4, #0x1400
-    LDR r2, =GPIOA_BASE
+    
+	LDR r2, =GPIOA_BASE
     STR r3, [r2, #GPIO_ODR]      ; Updating the output pins
     LDR r2, =GPIOC_BASE
     STR r4, [r2, #GPIO_ODR]

@@ -202,26 +202,26 @@ col_int
     ORR r1, #0x00400000
     STR r1, [r0, #GPIO_PUPDR]
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; --------- Main Program
-	MOV r10, #0x00000000
-	MOV r9, #0x00000000
-	MOV r11, #0x00000001
+	MOV r10, #0x00000000 ; queue
+	MOV r11, #0x00000001 ; current floor
 	BL hex_update
-;	BL door_open
+	BL door_open
+	BL door_close
 
-myMain
-	CMP r10, #0x00000000
-	BNE	floors_function
-	BEQ parser_function
+;myMain
+;	CMP r10, #0x00000000
+;	BNE	floors_function
+;	BEQ parser_function
 	
-floors_function
-	B floors
-	CMP r10, #0xFFFFFFFF
-	BEQ stop
-	B myMain
-parser_function
-	BL parser
+;floors_function
+;	B floors
+;	CMP r10, #0xFFFFFFFF
+;	BEQ stop
+;	B myMain
+;parser_function
+;	B parser
 ;	BL keypad_scan
-	B myMain
+;	B myMain
 
 	
 ;	LDR r0, =str   ; First argument

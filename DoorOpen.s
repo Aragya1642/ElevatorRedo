@@ -11,11 +11,11 @@ door_open PROC
 open_loop
 	MOV r7, #0x0    ;resting default values
 	MOV r5, #0x0
-	MOV r9 , #10
+	MOV r9 , #108
 	B open_step 
 open_step_loop         
-	ADD r5, r5 ,#0x1
-	CMP r5,r9
+	ADD r7, r7 ,#0x1
+	CMP r7,r9
 	BNE open_step
 	BEQ open_door_endl
 open_step

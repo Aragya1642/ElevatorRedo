@@ -14,8 +14,8 @@ close_loop
 	MOV r9 , #108
 	B close_step 
 close_step_loop         
-    ADD r5, r5 ,#0x1
-    CMP r5,r9
+    ADD r7, r7 ,#0x1
+    CMP r7,r9
 	BNE close_step
 	BEQ close_door_endl
 close_step

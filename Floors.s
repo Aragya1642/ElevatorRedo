@@ -12,27 +12,28 @@
 	ENTRY
 	
 floors PROC
+	PUSH{LR}
 	; Admin Reset
 	CMP r10, #0xFFFFFFFF
-	BEQ floor_1
+	BLEQ floor_1
 	
 	; Check for floor 4
 	CMP r10, #0x00000008
-	BEQ floor_4
+	BLEQ floor_4
 	
 	; Check for floor 3
 	CMP r10, #0x00000004
-	BEQ floor_3
+	BLEQ floor_3
 	
 	; Check for floor 2
 	CMP r10, #0x00000002
-	BEQ floor_2
+	BLEQ floor_2
 	
 	; Check for floor 1
 	CMP r10, #0x00000001
-	BEQ floor_1
-	
-	
+	BLEQ floor_1
+
+	pop{LR}
 	BX LR
 	ENDP
 	END

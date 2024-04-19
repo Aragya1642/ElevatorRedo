@@ -70,6 +70,7 @@ floor_1_from_4
 floor_1_call_endl
 	BIC r10, #0x00000001
 	PUSH {LR}
+	;call keypad function
 	BL light_update
 	POP {LR}
 	BX LR	
