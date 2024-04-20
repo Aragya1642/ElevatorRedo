@@ -108,11 +108,17 @@ Section Cross References
     floor1.o(Floor1) refers to keypadscan.o(keypadScan) for keypad_scan
     floor1.o(Floor1) refers to doorclose.o(doorClose) for door_close
     motorup.o(__DEFINES_STM32F4_CORE4_xx_DUMMY) refers (Special) to lightupdate.o(lightUpdate) for light_update
+    motorup.o(__DEFINES_STM32F4_CORE4_xx_DUMMY) refers (Special) to parse.o(Parse) for parser
     motorup.o(__DEFINES_STM32L4_xx_DUMMY) refers (Special) to lightupdate.o(lightUpdate) for light_update
+    motorup.o(__DEFINES_STM32L4_xx_DUMMY) refers (Special) to parse.o(Parse) for parser
     motorup.o(motorUp) refers (Special) to lightupdate.o(lightUpdate) for light_update
+    motorup.o(motorUp) refers (Special) to parse.o(Parse) for parser
     motordown.o(__DEFINES_STM32F4_CORE4_xx_DUMMY) refers (Special) to lightupdate.o(lightUpdate) for light_update
+    motordown.o(__DEFINES_STM32F4_CORE4_xx_DUMMY) refers (Special) to parse.o(Parse) for parser
     motordown.o(__DEFINES_STM32L4_xx_DUMMY) refers (Special) to lightupdate.o(lightUpdate) for light_update
+    motordown.o(__DEFINES_STM32L4_xx_DUMMY) refers (Special) to parse.o(Parse) for parser
     motordown.o(motorDown) refers (Special) to lightupdate.o(lightUpdate) for light_update
+    motordown.o(motorDown) refers (Special) to parse.o(Parse) for parser
     keypadscan.o(__DEFINES_STM32F4_CORE4_xx_DUMMY) refers (Special) to lightupdate.o(lightUpdate) for light_update
     keypadscan.o(__DEFINES_STM32L4_xx_DUMMY) refers (Special) to lightupdate.o(lightUpdate) for light_update
     keypadscan.o(keypadScan) refers (Special) to lightupdate.o(lightUpdate) for light_update

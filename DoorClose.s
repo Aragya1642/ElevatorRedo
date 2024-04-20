@@ -11,7 +11,7 @@ door_close PROC
 close_loop
 	MOV r7, #0x0    ;resting default values
 	MOV r5, #0x0
-	MOV r9 , #108
+	MOV r9 , #200
 	B close_step 
 close_step_loop         
     ADD r7, r7 ,#0x1

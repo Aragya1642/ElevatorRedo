@@ -2,6 +2,7 @@
 	INCLUDE stm32l476xx_constants.s  
 	
 	IMPORT	light_update
+	IMPORT parser
 	
 	AREA    motorDown, CODE, READONLY
 	EXPORT	motor_down			; make __main visible to linker

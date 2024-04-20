@@ -2,6 +2,7 @@
 	INCLUDE stm32l476xx_constants.s  
 		
 	IMPORT light_update
+	IMPORT parser
 		
 	AREA    motorUp, CODE, READONLY
 	EXPORT	motor_up			; make __main visible to linker
@@ -39,7 +40,8 @@ up_step
 	BIC r3, #0x6000
 	BIC r4,#0x1000
 	BIC r4,#0x0400
-
+	
+	
 	;delay
 	MOV r0, #0xFFFF	; Initial delay value
 up_delay1
